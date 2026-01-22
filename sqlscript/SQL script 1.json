@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "IF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net') \n  CREATE EXTERNAL DATA SOURCE [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net] \n  WITH (\n      LOCATION = 'abfss://adlsnyc-himani-singh@udstorageacc.dfs.core.windows.net' \n  )\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

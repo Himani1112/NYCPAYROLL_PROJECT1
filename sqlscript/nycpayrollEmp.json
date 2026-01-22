@@ -1,0 +1,17 @@
+{
+	"name": "nycpayrollEmp",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL TABLE [dbo].[NYC_Payroll_EMP_MD](\n[EmployeeID] [varchar](10) NULL,\n[LastName] [varchar](20) NULL,\n[FirstName] [varchar](20) NULL\n) \nWITH (\nLOCATION = 'dirpayrollfiles/dirpayrollfiles',\nDATA_SOURCE = [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net],\nFILE_FORMAT = [SynapseDelimitedTextFormat]\n)\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
