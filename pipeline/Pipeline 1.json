@@ -156,19 +156,19 @@
 				}
 			},
 			{
-				"name": "Data flow_aggrgate",
+				"name": "Data flow_Summary",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
 						"activity": "Data flow_2020",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					},
 					{
 						"activity": "Data flow_2021",
 						"dependencyConditions": [
-							"Skipped"
+							"Succeeded"
 						]
 					}
 				],
@@ -182,8 +182,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Dataflow_aggregate",
-						"type": "DataFlowReference"
+						"referenceName": "Mapping_Dataflow",
+						"type": "DataFlowReference",
+						"parameters": {
+							"dataflow_param_fiscalyear": 2020
+						}
 					},
 					"compute": {
 						"coreCount": 8,

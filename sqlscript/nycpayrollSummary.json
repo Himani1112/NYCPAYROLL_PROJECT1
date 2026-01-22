@@ -2,7 +2,7 @@
 	"name": "nycpayrollSummary",
 	"properties": {
 		"content": {
-			"query": "CREATE EXTERNAL TABLE [dbo].[NYC_Payroll_Summary](\n[FiscalYear] [int] NULL,\n[AgencyName] [varchar](50) NULL,\n[TotalPaid] [float] NULL\n)\nWITH (\nLOCATION = 'dirstaging',\nDATA_SOURCE = [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net],\nFILE_FORMAT = [SynapseDelimitedTextFormat]\n)\nGO\nDROP EXTERNAL TABLE [dbo].[NYC_Payroll_Summary];",
+			"query": "CREATE EXTERNAL TABLE [dbo].[NYC_Payroll_Summary](\n[FiscalYear] [int] NULL,\n[AgencyName] [varchar](50) NULL,\n[TotalPaid] [float] NULL\n)\nWITH (\nLOCATION = 'dirstaging',\nDATA_SOURCE = [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net],\nFILE_FORMAT = [SynapseDelimitedTextFormat]\n)\nGO\nDROP EXTERNAL TABLE [dbo].[NYC_Payroll_Summary];\nSELECT *FROM [dbo].[NYC_Payroll_Summary] ;\n\n",
 			"metadata": {
 				"language": "sql"
 			},

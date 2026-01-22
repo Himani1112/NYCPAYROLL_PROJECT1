@@ -2,7 +2,7 @@
 	"name": "nycpayrollEmp",
 	"properties": {
 		"content": {
-			"query": "CREATE EXTERNAL TABLE [dbo].[NYC_Payroll_EMP_MD](\n[EmployeeID] [varchar](10) NULL,\n[LastName] [varchar](20) NULL,\n[FirstName] [varchar](20) NULL\n) \nWITH (\nLOCATION = 'dirpayrollfiles/dirpayrollfiles',\nDATA_SOURCE = [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net],\nFILE_FORMAT = [SynapseDelimitedTextFormat]\n)\nGO",
+			"query": "CREATE EXTERNAL TABLE [dbo].[NYC_Payroll_EMP_MD](\n[EmployeeID] [varchar](10) NULL,\n[LastName] [varchar](20) NULL,\n[FirstName] [varchar](20) NULL\n) \nWITH (\nLOCATION = 'dirpayrollfiles/dirpayrollfiles',\nDATA_SOURCE = [adlsnyc-himani-singh_udstorageacc_dfs_core_windows_net],\nFILE_FORMAT = [SynapseDelimitedTextFormat]\n)\nGO\nSELECT *FROM [dbo].[NYC_Payroll_EMP_MD];",
 			"metadata": {
 				"language": "sql"
 			},
